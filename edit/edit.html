@@ -1,0 +1,30 @@
+<div class="container">
+<h4><span style="color:#5bc0de;" class="glyphicon glyphicon-edit"> </span> Edit Employee Data</h4>
+	 <hr>
+	 <div class="row">
+	 <div class="col-md-6">
+	 <form method="post"  ng-init="showEmployee()" ng-submit="updateEmployee(employee)">
+	
+<fieldset class="form-group">
+<label for="first_name">Name</label>
+<input type="text" class="form-control" id="name" ng-model="employee.empName" required>
+<label for="last_name">Email</label>
+<input type="email" class="form-control" id="email" ng-model="employee.empEmail" required>
+ <label for="first_name">Phone</label>
+<input type="text" class="form-control" id="phone" ng-model="employee.empPhone" required>
+<label for="last_name">Employee Id</label>
+<input type="text" class="form-control" id="eId" ng-model="employee.empId" required>
+<label for="first_name">Designation</label>
+<input type="text" class="form-control" id="design" ng-model="employee.empDesign" required>
+<label for="last_name">Salary</label>
+<input type="text" class="form-control" id="salary" ng-model="employee.empSalary" required>
+<label for="last_name">Date of Joining</label>
+<input type = "text"  ng-model="employee.empDoj" datepicker class="form-control" required>
+</fieldset> 
+<button type="submit" class="btn btn-success">Submit</button>
+<input type="reset" class="btn btn-primary" value="Reset">
+<a href="#/" class="btn btn-warning">Close</a>
+</form>
+</div>
+	  </div>
+	 </div>

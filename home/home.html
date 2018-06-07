@@ -1,0 +1,27 @@
+<div class="container table-responsive"> <h1>Employees Data List</h1>
+<table class="table table-striped" ng-init="getEmployees()">
+	<thead>
+	<tr>
+<th>Employee Name</th>
+<th>Employee Email</th>
+<th>Employee Degination</th>
+<th>Employee Salary</th>
+ <th>Actions</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="employee in employees | filter:search">
+	  <td>{{ employee.empName }}</td>
+	  <td>{{ employee.empEmail }}</td>
+	  <td>{{ employee.empDesign }}</td>
+	  <td>{{employee.empSalary | currency:"&#8377"}}</td>
+	  <td> 
+	   <a href="#edit/{{employee.id}}" class="btn btn-primary">Edit</a>
+	    <a href="#view/{{employee.id}}" class="btn btn-success">View</a>
+	   <a ng-click="deleteEmployee(employee.id)" class="btn btn-danger">Delete </a>
+	  </td>
+	</tr>
+	</tbody>
+</table>
+</div>
+
